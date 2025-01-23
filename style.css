@@ -9,6 +9,7 @@
   top: 0;
   z-index: 999;
 }
+
 .navbar-brand img {
   height: 100px;
   width: auto;
@@ -16,6 +17,7 @@
     -1px -1px 0px 0px rgba(128, 128, 128, 0.5);*/
   margin-left: 30px;
 }
+
 .navbar-nav {
   padding-left: 30px !important;
 }
@@ -23,24 +25,30 @@
 .navbar-nav li {
   padding: 0 10px;
 }
+
 .navbar-nav li a {
   float: left;
   text-align: left;
 }
+
 #nav-bar ul li a:hover {
   color: #007bff;
 }
+
 .navbar {
-  background: #fff;
+  background: none;
 }
+
 .navbar-toggler {
   border: none !important;
 }
+
 .nav-link {
   color: #333 !important;
   font-weight: 600;
   font-size: 14px;
 }
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -82,9 +90,11 @@
   width: 100%;
   margin: 0 auto;
 }
+
 .carousel-inner .carousel-item {
   transition-duration: 6s;
 }
+
 .carousel-caption {
   top: -15px !important;
   left: 50% !important;
@@ -94,11 +104,12 @@
   bottom: initial !important;
   width: 100%;
 }
+
 .carousel-caption h5 {
   color: rgb(255, 255, 255);
   font-size: 78px;
   text-align: left;
-  padding-top: 256px;
+  padding-top: 206px;
   padding-bottom: 50px;
   padding-left: 150px;
   padding-right: 400px;
@@ -112,6 +123,7 @@
   padding-left: 150px;
   padding-right: 400px;
 }
+
 @media screen and (max-width: 786px) {
   .carousel-caption h5 {
     font-size: 7vw;
@@ -126,31 +138,38 @@
 #about {
   padding-top: 80px;
   padding-bottom: 50px;
-  color: rgb(0, 0, 0); /*#555;*/
+  color: rgb(0, 0, 0);
+  /*#555;*/
   text-align: justify;
 }
+
 #about .btn {
   margin-top: 20px;
   outline: none;
   box-shadow: none;
   margin-bottom: 30px;
 }
+
 .about-content {
   padding-top: 20px;
 }
+
 .skills-bar p {
   padding: 9px;
   margin-bottom: 6px;
   font-weight: 600;
 }
+
 .progress-bar {
-   border-radius: 20px;
-  
+  border-radius: 20px;
+
 }
+
 .progress {
   border-radius: 20px !important;
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
 }
+
 /*------------------Services---------*/
 #services {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
@@ -162,11 +181,13 @@
   padding-top: 80px;
   padding-bottom: 50px;
 }
+
 #services h1 {
   text-align: center;
   color: #efefef !important;
   padding-bottom: 10px;
 }
+
 #services h1::after {
   content: "";
   background: #efefef;
@@ -175,9 +196,11 @@
   width: 170px;
   margin: 20px auto 5px;
 }
+
 .services {
   margin-top: 40px;
 }
+
 .icon {
   font-size: 40px;
   margin: 20px auto;
@@ -188,11 +211,13 @@
   border: 1px solid #fff;
   border-radius: 50%;
 }
+
 #services p {
   font-size: 14px;
   margin-top: 20px;
   color: #ccc;
 }
+
 .services .col-md-3:hover {
   background: #007bff;
   cursor: pointer;
@@ -212,15 +237,16 @@
   font-family: sans-serif;
   font-size: 30px;
 }
+
 .promo img {
   display: flex;
-  align-items: center; 
+  align-items: center;
   flex-direction: column;
   justify-content: center;
 }
 
 
-  
+
 /*------offerings-----------------*/
 #offerings {
   padding: 80px 0 20px;
@@ -235,6 +261,7 @@
   font-family: sans-serif;
   font-size: 30px;
 }
+
 #offerings h1 {
   text-align: center;
   color: rgb(0, 0, 0) !important;
@@ -246,12 +273,12 @@
   justify-content: center;
   height: 340px;
   width: auto;
-  
+
 }
 
 #offerings p {
   font-size: 20px;
-  font-weight:800px;
+  font-weight: 800px;
   margin-top: 20px;
   color: #000000;
 }
@@ -395,31 +422,37 @@ a
   background-attachment: fixed;
   text-align: center;
 }
+
 #testimonials h1 {
   text-align: center;
   color: #ccc !important;
   padding-bottom: 10px;
 }
+
 #testimonials .row {
   margin-top: 20px;
 }
+
 .col-md-4 {
   margin: 40px auto;
 }
+
 .profile {
   padding: 70px 10px 10px;
   background-color: #efefef;
 }
+
 .user {
   width: 120px;
   height: 120px;
   border-radius: 50%;
 }
+
 .profile img {
   display: flex;
-  align-items: center; 
+  align-items: center;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .profile h3 {
@@ -427,14 +460,17 @@ a
   margin-top: 15px;
   color: #007bff;
 }
+
 #testimonials span {
   font-size: 12px;
   color: #555;
 }
+
 blockquote {
   font-size: 16px;
   line-height: 30px;
 }
+
 blockquote::before {
   content: '"';
   font-size: 50px;
@@ -444,6 +480,7 @@ blockquote::before {
   bottom: -15px;
   right: 5px;
 }
+
 blockquote::after {
   content: '"';
   font-size: 50px;
@@ -453,11 +490,13 @@ blockquote::after {
   bottom: -15px;
   left: 5px;
 }
+
 .profile:hover {
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: 0.5s;
 }
+
 /*------------Get in Touch-------------*/
 #contact {
   background: #efefef;
@@ -467,26 +506,32 @@ blockquote::after {
   padding-bottom: 40px;
   color: rgb(15, 15, 15);
 }
+
 #contact h1 {
   text-align: center;
   color: rgb(17, 17, 17) !important;
   padding-bottom: 10px;
 }
+
 .contact-form {
   padding: 15px;
 }
+
 .form-control {
   border-radius: 0 !important;
   border: none !important;
 }
+
 ::placeholder {
   color: rgb(41, 41, 41) !important;
 }
+
 .follow {
   background: #fff;
   padding: 10px;
   margin: 15px;
 }
+
 .contact-info .fa {
   margin: 10px;
   color: #007bff;
@@ -512,9 +557,11 @@ blockquote::after {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
 .whatsapplink span {
   color: #fff;
 }
+
 .whatsapplink:hover {
   color: #fff;
   background-color: #249a00;
@@ -523,10 +570,11 @@ blockquote::after {
 
 /*------Footer--------------*/
 #footer {
-  background:#333;
+  background: #333;
   color: #fff;
   padding: 12px 5px 5px 2px;
 }
+
 #scroll-to-top {
   padding: 10px 15px;
   background: #249a00;
@@ -537,6 +585,7 @@ blockquote::after {
   right: 10px;
   z-index: 999999;
 }
+
 /*
 header
 {
@@ -646,52 +695,65 @@ h1
   padding-top: 40px;
   padding-top: 80px;
   padding-bottom: 50px;
-  color: darkslateblue; /*#555;*/
+  color: darkslateblue;
+  /*#555;*/
 }
+
 #energy .btn {
   margin-top: 20px;
   outline: none;
   box-shadow: none;
   margin-bottom: 30px;
 }
+
 .energy-content {
   padding-top: 20px;
 }
+
 /***********Agriculture Page**************/
 #agriculture {
   font-style: italic;
   padding-top: 40px;
   padding-bottom: 50px;
-  color: #000000; /*#555;*/
+  color: #000000;
+  /*#555;*/
 }
+
 #agriculture .btn {
   margin-top: 20px;
   outline: none;
   box-shadow: none;
   margin-bottom: 30px;
 }
+
 .agriculture-content {
   padding-top: 20px;
 }
+
 #aggregation {
   font-style: italic;
   padding-top: 10px;
   padding-bottom: 100px;
-  color: #000000; /*#555;*/
+  color: #000000;
+  /*#555;*/
 }
+
 /***********Consulting Page**************/
 #consulting {
   padding-top: 80px;
   padding-bottom: 50px;
   font-style: italic;
-  color: darkslateblue; /*#555;*/
+  color: darkslateblue;
+  /*#555;*/
 }
+
 #consulting .btn {
   margin-top: 20px;
   outline: none;
   box-shadow: none;
   margin-bottom: 30px;
 }
+
 .consulting-content {
   padding-top: 20px;
 }
@@ -701,10 +763,12 @@ h1
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .industrial-consulting ul {
   padding-left: 40px;
   margin-bottom: 20px;
 }
+
 .industrial-consulting .images {
   display: flex;
   flex-wrap: wrap;
@@ -713,6 +777,7 @@ h1
   padding: 3vw;
   box-sizing: border-box;
 }
+
 .industrial-consulting .images .img {
   background-position: center center;
   background-size: 80% 80%;
@@ -723,27 +788,34 @@ h1
   margin: 10% 0;
   transition: 0.4s ease;
 }
+
 .industrial-consulting .images .img:hover {
   background-size: 97% 97%;
   transition: 0.6s ease;
 }
+
 /***********Education Page**************/
 #education {
   padding-top: 10px;
   padding-bottom: 50px;
   font-style: italic;
-  color: darkslateblue; /*#555;*/
+  color: darkslateblue;
+  /*#555;*/
 }
+
 #education .btn {
   margin-top: 20px;
   outline: none;
   box-shadow: none;
   margin-bottom: 30px;
 }
+
 .education-content {
   padding-top: 20px;
-  color: #000000 !important; /*#555;*/
+  color: #000000 !important;
+  /*#555;*/
 }
+
 .education-content .images {
   display: flex;
   flex-wrap: wrap;
@@ -752,6 +824,7 @@ h1
   padding: 1vw;
   box-sizing: border-box;
 }
+
 .education-content .images .img {
   background-position: center center;
   background-size: 80% 80%;
@@ -762,21 +835,25 @@ h1
   margin: 2% 0;
   transition: 0.4s ease;
 }
+
 .education-content .images .img:hover {
   background-size: 97% 97%;
   transition: 0.6s ease;
 }
+
 /***********Bhagyaodaya Page**************/
 #partners {
   padding-top: 80px;
   padding-bottom: 50px;
   color: #555;
 }
+
 h1 {
   text-align: center;
   color: #555 !important;
   padding-bottom: 10px;
 }
+
 h1::after {
   content: "";
   background: #007bff;
@@ -785,14 +862,17 @@ h1::after {
   width: 170px;
   margin: 20px auto 5px;
 }
+
 .image-pic {
   margin-top: 50px;
- }
+}
+
 .image-pic .img-boxes {
   opacity: 1;
   display: block;
   position: relative;
 }
+
 .image-pic h2 {
   font-size: 15px;
   margin-top: 10px;
@@ -815,11 +895,13 @@ h1::after {
   padding-bottom: 50px;
   color: #555;
 }
+
 h1 {
   text-align: center;
   color: #555 !important;
   padding-bottom: 10px;
 }
+
 h1::after {
   content: "";
   background: #007bff;
@@ -828,32 +910,39 @@ h1::after {
   width: 170px;
   margin: 20px auto 5px;
 }
+
 .profile-pic {
   margin-top: 25px;
 }
+
 .profile-pic .img-box {
   opacity: 1;
   display: block;
   position: relative;
 }
+
 .profile-pic .img-box img {
   filter: grayscale(1);
 }
+
 .profile-pic .img-box img:hover {
   filter: grayscale(0);
   cursor: pointer;
 }
+
 .profile-pic h2 {
   font-size: 22px;
   font-weight: bold;
   margin-top: 15px;
   color: #007bff !important;
 }
+
 .profile-pic h3 {
   font-size: 15px;
   font-weight: bold;
   margin-top: 15px;
 }
+
 #team .fa {
   height: 25px;
   width: 25px;
@@ -862,6 +951,7 @@ h1::after {
   padding: 4px;
   border-radius: 50%;
 }
+
 .img-box ul {
   padding: 15px 0;
   position: absolute;
@@ -871,13 +961,16 @@ h1::after {
   transform: translateX(-50%);
   opacity: 0;
 }
+
 .img-box ul li {
   padding: 5px;
   display: inline-block;
 }
+
 .img-box:hover ul {
   opacity: 1;
 }
+
 .img-box ul,
 .img-box ul li {
   transition: 0.5s;
