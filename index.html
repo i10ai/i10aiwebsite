@@ -1,0 +1,370 @@
+<html lang="en">
+
+<head>
+  <title>i10AI</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="shortcut icon" href="/img/OORJAgram.ico" type="image/x-icon" />
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="/js/index.js"></script>
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+
+<body onLoad="onload()">
+  <!-------Header Page------------->
+  <section id="nav-bar" w3-include-html="./header.html"></section>
+  <!-------Slider------------->
+  <div id="slider">
+    <div id="headerSlider" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#headerSlider" data-slide-to="0" class="active"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block img-fluid" src="img/BGBanner.png" />
+          <div class="carousel-caption">
+            <h5>
+              <p>i10AI</p>
+            <p>Solutions</p>
+            <h6><p>Embark on your Industrial 
+              <p>Digital Transformation</p> 
+              <p>With Us</p></h6>
+          </h5>
+          <a href="#contact"  class="btn btn-primary">
+            SEND MESSAGE
+          </a>
+          </div>
+        </div>
+      </div>
+
+      <!---<a class="carousel-control-prev" href="#headerSlider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#headerSlider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>-->
+    </div>
+  </div>
+  <!------------About---------------->
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>About Us</h2>
+          <div class="about-content">
+            i10AI is empowering businesses to navigate the digital frontier with unprecedented efficiency. 
+            We build softwares aligned with businesses, in the manufcaturing, B2B Marketplaces, Dark Factories and Customer Engagement.
+            We are architects of transformation, building intelligent solutions that bridge 
+            the gap between traditional industries and the dynamic world of online commerce.
+            i10AI specializes in crafting bespoke software and platforms designed to streamline operations, 
+            enhance customer engagement, and drive revenue growth for industrial enterprises. Our expertise lies 
+            in understanding the unique challenges and opportunities within the B2B sector, from complex product catalogs 
+            and intricate pricing structures to specialized procurement processes and long sales cycles.
+            <span id="dots" style="display: inline;">...</span>
+            <span id="more" style="display: none;">We empower businesses to unlock the full potential of e-commerce, 
+              offering tailored solutions that optimize inventory management, automate workflows, and provide seamless
+               online experiences for both buyers and sellers. With i10AI as your partner, you gain a competitive edge 
+               in the digital marketplace, transforming your business into a data-driven, customer-centric powerhouse.
+            </span>
+          </div>
+          <button onclick="myFunction()" id="myBtn" type="button" class="btn btn-primary">
+            Read more >>
+          </button>
+
+          <script>
+            function myFunction() {
+              var dots = document.getElementById("dots");
+              var moreText = document.getElementById("more");
+              var btnText = document.getElementById("myBtn");
+
+              if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more >>";
+                moreText.style.display = "none";
+              } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less <<";
+                moreText.style.display = "inline";
+              }
+            }
+          </script>
+        </div>
+        <div class="col-md-6 skills-bar">
+          <p>B2B Platform</p>
+          <div class="progress">
+            <div class="progress-bar" id="electrification" style="width: 100%;">Customisable</div>
+          </div>
+          <p>MOTORIT</p>
+          <div class="progress">
+            <div class="progress-bar" id="employment" style="width: 100%;">Motor Analytics</div>
+          </div>
+          <p>FACTORISE</p>
+          <div class="progress">
+            <div class="progress-bar" id="educational" style="width: 100%;">Dark Factory Solutions</div>
+          </div>
+          <p>CUSTOMDEV</p>
+          <div class="progress">
+            <div class="progress-bar" id="empowerment" style="width: 100%;">Business Based Development</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-----------Services-------------->
+  <section id="services">
+    <div class="container">
+      <h1>Our Services</h1>
+      <div class="row services">
+        <div class="col-md-3 text-center">
+          <div class="icon">
+            <i class="fa fa-sun-o"></i>
+          </div>
+          <h3><a>
+              <font color="white">B2B PLATFORMS</font>
+            </a></h3>
+          <p>
+            We help you get digital, with our low code no code platforming solution.
+          </p>
+
+        </div>
+        <div class="col-md-3 text-center">
+          <div class="icon">
+            <i class="fa fa-pagelines"></i>
+          </div>
+          <h3><a>
+              <font color="white">MOTORIT</font>
+            </a></h3>
+          <p>
+            The single point of failure in your business is motors, monitor their health with our motor analyttics IOT solution
+          </p>
+        </div>
+        <div class="col-md-3 text-center">
+          <div class="icon">
+            <i class="fa fa-industry"></i>
+          </div>
+          <h3><a>
+              <font color="white">DIGITAL CONSULTING</font>
+            </a></h3>
+          <p>
+            With expertise from Energy, IT and cross industries, we help transfrom digitally!
+          </p>
+        </div>
+        <div class="col-md-3 text-center">
+          <div class="icon">
+            <i class="fa fa-university"></i>
+          </div>
+          <h3><a>
+              <font color="white">CUSTOMISED DEVELOPMENT</font>
+            </a></h3>
+          <p>
+            Get your digital solutions designed with us aligned to to your indistrial need
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-------------promo----------------->
+  <section id="promo">
+    <div class="container">
+      <p>We help you get digital while you help us with your business needs, be it a factory, supply chain or lead generation</p>
+      <img class="d-block mx-auto img-fluid" src="img/Digitally.png" style="width: 600px; height: 250px;" />
+      <p>For Digital Indutrial Consulting and Transformation - i10AI is available</p>
+      <a href="#contact" class="btn btn-primary">Contact Us</a>
+    </div>
+  </section>
+  <!-----------offerings Plans------------->
+  <section id="offerings">
+    <div class="container">
+      <h1>Offerings</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <img class="d-block mx-auto img-fluid" src="img/Motorit.png" style="width: auto; height: auto;" />
+            <p>Smart analytics of all your industrial motors with AI enabled predictability of motor health</p>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <img class="d-block mx-auto img-fluid" src="img/ind2b.png" style="width: auto; height: auto;" />
+            <p>An AI powered B2B platform with focus on right products and customers</p>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <img class="d-block mx-auto img-fluid" src="img/Factorise.png" style="width: auto; height: auto;" />
+            <p>Complete IOT4.0 solution to manage your factory while you sleep</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+  <!------------Testimonials------------------>
+  <section id="testimonials">
+    <div class="container">
+      <h1>Testimonials</h1>
+      <p class="text-center">
+        <font color="white">Recommendation & Accolades!</font>
+      </p>
+      <div class="row">
+        <div class="col-md-4 text center">
+          <div class="profile">
+            <img src="img/TTI_Logo.jpg" class="user" />
+            <blockquote>
+              We need a powerful digital footprint aligned to latest technologies to get our business a futuristic outlook
+            </blockquote>
+            <h3>Transforming Business Digitally</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!------------Partners------------------
+  <section id="Partners">
+    <div class="container">
+      <h1>With us</h1>
+      <div class="row">
+        <div id="headerSlider" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#headerSlider" data-slide-to="0" class="active"></li>
+            <li data-target="#headerSlider" data-slide-to="1"></li>
+            <li data-target="#headerSlider" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block img-fluid" src="img/OORJAgram1.JPG" />
+              <img class="d-block img-fluid" src="img/OORJAgram2.JPG" />
+              <img class="d-block img-fluid" src="img/OORJAgram3.JPG" />
+            </div>
+            <a class="carousel-control-prev" href="#headerSlider" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#headerSlider" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  --->
+  <!-------------------Get in Touch-------------------->
+  <section id="contact">
+    <div class="container">
+      <h1>Get In Touch</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <form class="contact-form" onsubmit="onubmit(event)">
+            <div class="form-group">
+              <input type="text" class="form-control" id="contact-name" placeholder="Your Name" />
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control" id="contact-no" placeholder="Mobile No." />
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="contact-email" placeholder="Email Id" />
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="4" id="contact-msg" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              SEND MESSAGE
+            </button>
+            <a target="_blank" title="WhatsApp Us"
+              href="https://web.whatsapp.com/send?phone=+919625206671&amp;text=Visited I10AI.Com would like to get more information.."
+              class="whatsapplink hidemobile">
+              <i class="fa fa-fw fa-whatsapp"></i>
+              <span>WhatsApp Us</span>
+            </a>
+            <script type="text/javascript">
+              var mobile = /iphone|ipad|android|blackberry|mini|windows\sce|palm/i.test(
+                navigator.userAgent.toLowerCase()
+              );
+              if (mobile) {
+                $(".hidemobile").css("display", "none"); // $('.hidemobile').hide();
+              } else {
+                $(".hideweb").css("display", "none"); // $('.hideweb').hide();
+              }
+              function onubmit(e) {
+                e.preventDefault();
+                var name = document.getElementById("contact-name").value;
+                var no = document.getElementById("contact-no").value;
+                var email = document.getElementById("contact-email").value;
+                var msg = document.getElementById("contact-msg").value;
+                let message =
+                  "Hi Admin. \n There is a new Contact Query from " +
+                  name +
+                  "\n MobileNo: " +
+                  no +
+                  "\n Email: " +
+                  email +
+                  "\n Mail: " +
+                  email +
+                  "\n " +
+                  msg;
+                document.getElementById("contact-no").value = "";
+                document.getElementById("contact-email").value = "";
+                document.getElementById("contact-msg").value = "";
+                document.getElementById("contact-name").value = "";
+                window.open(
+                  "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=i10ai.tech.in&su=Contact Query for I10AI.in&body=" +
+                  message +
+                  "&bcc=i10ai.tech@gmail.com&tf=1",
+                  "popUpWindow",
+                  "height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes"
+                );
+
+              }                
+            </script>
+          </form>
+        </div>
+          <div class="col-md-6 contact-info">
+          <div class="follow">
+            <b>Address: </b><i class="fa fa-map-marker"></i> KDEM, HSR,
+            Bangalore, IN
+          </div>
+          <div class="follow">
+            <b>Phone: </b><i class="fa fa-phone"></i>+91 123456789
+          </div>
+          <div class="follow">
+            <b>Email: </b><i class="fa fa-envelope-o"></i> support@i10ai.com
+          </div>
+          <div class="follow">
+            <label><b>Get Social:</b></label>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+            <!--<a href="#"><i class="fa fa-youtube-play"></i></a>-->
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/i10ai/" target="_blank"><i
+                class="fa fa-linkedin"></i></a>
+          </div>
+        </div>       
+      </div>
+
+    </div>
+  </section>
+  <!------------------Footer Page-------------------->
+  <section id="footer" w3-include-html="./footer.html"></section>
+  <a id="page_scroller" href="#top" style="position: fixed; z-index: 2147483647;">
+    <i class="fa fa-chevron-up"></i>
+  </a>
+  <!------------------Footer End-------------------->
+  <script src="/js/smooth-scroll.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]');
+  </script>
+  <script src="/js/Scrolltop.js"></script>
+  <button onclick="topFunction()" id="scroll-to-top"> ^ </button>
+  </body>
+<script>
+  w3.includeHTML();
+</script>
+
+</html>
