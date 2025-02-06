@@ -1,0 +1,255 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(240, 240, 240);
+}
+
+/* Header Section */
+.header-section {
+  background: url("img/gradient-dark-blue-futuristic-digital-background.jpg")
+    no-repeat center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+}
+
+/* Navigation Bar */
+.nav-container {
+  background: rgb(20, 107, 165);
+  display: flex;
+  justify-content: flex-start; /* Move navigation text to the left */
+  align-items: center;
+  padding: 15px 50px 15px 750px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  overflow-x: none;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  margin-right: 20px; /* Keep the logo fixed in the same place */
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 70px;
+  padding: 0;
+  margin: 0;
+  margin-left: 510px; /* Move the navigation links 50px to the right */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600; /* Ensure consistent font weight */
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #00d9ff;
+}
+
+/* Banner Section */
+.banner {
+  text-align: center;
+  padding: 200px 0; /* Adjust padding to center the text */
+  position: relative;
+}
+
+.banner h1 {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-90%, -150%);
+}
+
+/* Container Layout */
+.container2 {
+  display: grid;
+  gap: 40px;
+  padding: 0 350px;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 10px;
+}
+
+/* Section Styles */
+.section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f8f9fa, #e3f2fd); /* Subtle gradient */
+  transition: transform 0.3s ease-in-out;
+
+  /* Border & Shadow */
+  border: 1px solid rgba(0, 150, 136, 0.4); /* Thin AI-tech inspired border */
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08); /* Light professional shadow */
+}
+
+/* Image Styling */
+.image {
+  width: calc(100% - 40px);
+  max-width: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  padding: 10px;
+  background: linear-gradient(
+    135deg,
+    rgb(80, 255, 240),
+    #c3cfe2,
+    rgb(93, 107, 187)
+  );
+}
+
+.image:hover {
+  transform: scale(1);
+}
+
+/* Text Styling */
+.sectionText {
+  font-size: 25px;
+  line-height: 1.5;
+  padding: 10px;
+  position: relative;
+  animation: subtleFloat 3s ease-in-out infinite;
+}
+
+/* Subtle Floating Animation */
+@keyframes subtleFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Alternate Section Layout */
+.section:nth-child(odd) {
+  flex-direction: row;
+}
+
+.section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Scroll to Top Button */
+#scroll-to-top {
+  padding: 10px 15px;
+  background: #249a00;
+  color: white;
+  position: fixed;
+  font-size: 14px;
+  font-weight: 800;
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  z-index: 999999;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#scroll-to-top:hover {
+  background: #1f7a00;
+}
+
+/* Keyframes for left to right animation */
+/* Keyframes for left to right animation */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Keyframes for right to left animation */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Initially, no animation */
+.section {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+/* When hovering, apply the animation to the entire section */
+.section:nth-child(odd) {
+  animation: slideInLeft 4s ease-in-out forwards;
+}
+
+.section:nth-child(even) {
+  animation: slideInRight 8s ease-in-out forwards;
+}
+
+/* ind2b2.html */
+.card-sleek {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-sleek:hover {
+  transform: translateY(-5px);
+}
+
+.card-sleek .card-body {
+  padding: 2rem;
+}
+
+.card-sleek .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-sleek .card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.card-sleek .btn-sleek {
+  background-color: #fff;
+  color: #667eea;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.card-sleek .btn-sleek:hover {
+  background-color: #667eea;
+  color: #fff;
+}
