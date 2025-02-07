@@ -17,8 +17,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="./js/Scrolltop.js"></script>
-    <script src="./js/smooth-scroll.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
   </head>
 
@@ -43,7 +41,7 @@
                 <p>Embark on your Industrial</p>
                 <p>Digital Transformation With Us</p>
               </h6>
-              <div style="text-align: left; padding-left: 150px">
+              <div class="slider-btn">
                 <a href="#contact" class="btn btn-primary">SEND MESSAGE</a>
               </div>
             </div>
@@ -174,7 +172,7 @@
                 class="whatsapplink hidemobile"
               >
                 <i class="fa fa-fw fa-whatsapp"></i>
-                <span class="btn">WHATSAPP US</span>
+                <span>WHATSAPP US</span>
               </a>
               <script type="text/javascript">
                 var mobile =
@@ -248,34 +246,61 @@
     <section id="footer" w3-include-html="./footer.html"></section>
 
     <!------------------Footer End-------------------->
-    <script src="/js/smooth-scroll.js"></script>
     <script>
-      var scroll = new SmoothScroll('a[href*="#"]');
+      w3.includeHTML();
     </script>
-    <script src="/js/Scrolltop.js"></script>
-  </body>
-  <script>
-    w3.includeHTML();
-  </script>
-  <script>
-    // Load the about.html content dynamically
-    w3.includeHTML(function () {
-      // After loading, add event listener to the button
-      document.getElementById("myBtn").addEventListener("click", function () {
-        var dots = document.getElementById("dots");
-        var moreText = document.getElementById("more");
-        var btnText = document.getElementById("myBtn");
+    <script>
+      // Load the about.html content dynamically
+      w3.includeHTML(function () {
+        // After loading, add event listener to the button
+        document.getElementById("myBtn").addEventListener("click", function () {
+          var dots = document.getElementById("dots");
+          var moreText = document.getElementById("more");
+          var btnText = document.getElementById("myBtn");
 
-        if (dots.style.display === "none") {
-          dots.style.display = "inline";
-          btnText.innerHTML = "Read more >>";
-          moreText.style.display = "none";
-        } else {
-          dots.style.display = "none";
-          btnText.innerHTML = "Read less <<";
-          moreText.style.display = "inline";
-        }
+          if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more >>";
+            moreText.style.display = "none";
+          } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less <<";
+            moreText.style.display = "inline";
+          }
+        });
       });
-    });
-  </script>
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdowns = document.querySelectorAll(".dropdown");
+
+        dropdowns.forEach((dropdown) => {
+          const toggle = dropdown.querySelector(".dropdown-toggle");
+
+          if (toggle) {
+            toggle.addEventListener("click", function (e) {
+              e.preventDefault();
+              dropdown.classList.toggle("active");
+
+              // Close other dropdowns when one is opened
+              dropdowns.forEach((otherDropdown) => {
+                if (otherDropdown !== dropdown) {
+                  otherDropdown.classList.remove("active");
+                }
+              });
+            });
+          }
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener("click", function (event) {
+          if (!event.target.closest(".dropdown")) {
+            dropdowns.forEach((dropdown) =>
+              dropdown.classList.remove("active")
+            );
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
