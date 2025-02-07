@@ -79,10 +79,10 @@ body {
 .container2 {
   display: grid;
   gap: 40px;
-  padding: 0 350px;
-  max-width: 100vw;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
   overflow-x: hidden;
-  margin: 10px;
 }
 
 /* Section Styles */
@@ -90,57 +90,48 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   background: linear-gradient(135deg, #f8f9fa, #e3f2fd); /* Subtle gradient */
   transition: transform 0.3s ease-in-out;
-
-  /* Border & Shadow */
   border: 1px solid rgba(0, 150, 136, 0.4); /* Thin AI-tech inspired border */
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08); /* Light professional shadow */
 }
 
 /* Image Styling */
 .image {
-  width: calc(100% - 40px);
+  width: 100%;
   max-width: 300px;
+  height: auto;
   border-radius: 8px;
   object-fit: cover;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
+  background: linear-gradient(135deg, rgb(80, 255, 240), #c3cfe2, rgb(93, 107, 187));
   padding: 10px;
-  background: linear-gradient(
-    135deg,
-    rgb(80, 255, 240),
-    #c3cfe2,
-    rgb(93, 107, 187)
-  );
+  transition: transform 0.3s ease;
 }
 
 .image:hover {
-  transform: scale(1);
+  transform: scale(1.02);
 }
 
 /* Text Styling */
 .sectionText {
-  font-size: 25px;
-  line-height: 1.5;
-  padding: 10px;
-  position: relative;
-  animation: subtleFloat 3s ease-in-out infinite;
+  flex: 1;
+  padding: 20px;
 }
 
-/* Subtle Floating Animation */
-@keyframes subtleFloat {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.sectionText h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.sectionText p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
 }
 
 /* Alternate Section Layout */
@@ -152,6 +143,102 @@ body {
   flex-direction: row-reverse;
 }
 
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .container2 {
+    padding: 30px 15px;
+  }
+  
+  .section {
+    padding: 25px;
+  }
+  
+  .sectionText h1 {
+    font-size: 2rem;
+  }
+  
+  .sectionText p {
+    font-size: 1rem;
+  }
+  
+  .image {
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container2 {
+    padding: 25px 10px;
+  }
+  
+  .section {
+    padding: 20px;
+    gap: 15px;
+  }
+  
+  .image {
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 20px 15px;
+  }
+  
+  .sectionText {
+    padding: 15px 0;
+  }
+  
+  .sectionText h1 {
+    font-size: 1.8rem;
+  }
+  
+  .image {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container2 {
+    padding: 20px 10px;
+    gap: 25px;
+  }
+  
+  .section {
+    padding: 15px;
+  }
+  
+  .sectionText h1 {
+    font-size: 1.5rem;
+  }
+  
+  .sectionText p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Animation */
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Scroll to Top Button */
 #scroll-to-top {
   padding: 10px 15px;
@@ -160,59 +247,25 @@ body {
   position: fixed;
   font-size: 14px;
   font-weight: 800;
-  position: fixed;
   bottom: 30px;
   right: 10px;
   z-index: 999999;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 #scroll-to-top:hover {
   background: #1f7a00;
 }
 
-/* Keyframes for left to right animation */
-/* Keyframes for left to right animation */
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Keyframes for right to left animation */
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Initially, no animation */
-.section {
-  transform: translateX(0);
-  opacity: 1;
-  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
-}
-
-/* When hovering, apply the animation to the entire section */
-.section:nth-child(odd) {
-  animation: slideInLeft 4s ease-in-out forwards;
-}
-
-.section:nth-child(even) {
-  animation: slideInRight 8s ease-in-out forwards;
-}
+/* Add animation delay for sections */
+.section:nth-child(1) { animation-delay: 0.1s; }
+.section:nth-child(2) { animation-delay: 0.2s; }
+.section:nth-child(3) { animation-delay: 0.3s; }
+.section:nth-child(4) { animation-delay: 0.4s; }
+.section:nth-child(5) { animation-delay: 0.5s; }
 
 /* ind2b2.html */
 .card-sleek {
