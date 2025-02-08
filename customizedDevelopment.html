@@ -331,6 +331,48 @@
       .card:hover {
         transform: scale(0.95);
       }
+      
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        .services-banner .carousel-inner {
+          height: 40vh !important;
+        }
+        
+        .display-4 {
+          font-size: 2rem !important;
+        }
+        
+        .lead {
+          font-size: 1.1rem !important;
+        }
+        
+        .card {
+          height: auto !important;
+          margin-bottom: 20px;
+        }
+        
+        .card-title {
+          font-size: 1.5rem !important;
+        }
+        
+        .container {
+          padding: 0 15px;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        .services-banner .carousel-inner {
+          height: 30vh !important;
+        }
+        
+        .display-4 {
+          font-size: 1.75rem !important;
+        }
+        
+        .card-body {
+          padding: 1.5rem !important;
+        }
+      }
     </style>
 
     <section id="footer" w3-include-html="./footer.html"></section>
