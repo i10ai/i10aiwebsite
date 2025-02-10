@@ -1001,7 +1001,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin: 0.5px;
   }
   .copyright {
     margin-bottom: 10px;
