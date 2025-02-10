@@ -7,11 +7,11 @@
 
 /*------------Nav bar----------*/
 .navbar.bg-light {
-  background-color: none;
+  background-color: transparent;
 }
 
 .nav-bar {
-  background-color: none;
+  background-color: transparent;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -24,8 +24,7 @@
 }
 
 .navbar {
-  background-color: #74cdc0;
-  background: none;
+  background: transparent;
   height: 50px;
   top: 0;
   margin-top: 0;
@@ -86,35 +85,35 @@
 
 .dropdown-content {
   position: absolute;
-  background-color: #fcfcfc;
+  background-color: #ffffff;
   font-weight: 600;
   font-size: 14px;
   min-width: 250px;
-  max-width: 90vw; /* Ensures dropdown fits smaller screens */
+  max-width: 90vw;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1050; /* Keeps dropdown above other sections */
+  z-index: 1050;
   top: calc(100% + 2px);
   left: 0;
   display: none;
+}
+
+.dropdown-content a {
+  color: #000000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f8f8f8;
+  color: #007bff;
 }
 
 .dropdown:hover .dropdown-content,
 .dropdown-content:hover {
   display: flex;
   flex-direction: column;
-}
-
-.dropdown-content a {
-  color: #006fb0;
-  padding: 10px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  color: #fff !important;
-  background-color: rgba(0, 169, 157, 0.6);
-  text-decoration: none;
 }
 
 .dropdown-menu {
@@ -903,6 +902,30 @@ footer {
   margin-top: -30px;
   font-size: 13px;
   text-transform: uppercase;
+}
+
+.navbar-collapse {
+  background-color: #ffffff;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-nav {
+    background-color: #ffffff;
+  }
+  
+  .navbar-nav .nav-item {
+    padding: 8px 15px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #000000 !important;
+  }
 }
 
 /* Media Queries for Responsiveness */
