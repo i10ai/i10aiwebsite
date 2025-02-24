@@ -7,11 +7,21 @@
     max-width: 1200px;
     margin: auto;
     padding: 40px 20px;
-    height: 80vh;
+    min-height: 80vh;
   "
+  class="about-section"
 >
   <!-- Left Content -->
-  <div style="flex: 1; min-width: 300px; max-width: 600px">
+  <div
+    style="
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+      padding-right: 20px;
+      margin-bottom: 30px;
+    "
+    class="about-content"
+  >
     <h2 style="font-size: 28px; font-weight: bold; margin-bottom: 10px">
       About Us
     </h2>
@@ -46,6 +56,7 @@
         font-size: 16px;
         cursor: pointer;
         border-radius: 5px;
+        margin-top: 15px;
       "
     >
       Read more &gt;&gt;
@@ -60,7 +71,9 @@
       max-width: 500px;
       display: flex;
       justify-content: center;
+      align-items: center;
     "
+    class="about-image"
   >
     <img
       src="/i10aiwebsite/img/about_us copy.png"
@@ -69,6 +82,58 @@
     />
   </div>
 </div>
+
+<!-- CSS for Responsiveness -->
+<style>
+  /* Base styles already in inline CSS */
+
+  /* Media query for tablets */
+  @media screen and (max-width: 992px) {
+    .about-section {
+      flex-direction: column;
+      padding: 30px 15px;
+    }
+
+    .about-content,
+    .about-image {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .about-content {
+      padding-right: 0;
+      margin-bottom: 30px;
+      order: 1;
+    }
+
+    .about-image {
+      order: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  /* Media query for mobile phones */
+  @media screen and (max-width: 576px) {
+    .about-section {
+      padding: 20px 10px;
+      min-height: auto;
+    }
+
+    .about-content h2 {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .about-content p {
+      font-size: 15px;
+    }
+
+    .about-content button {
+      display: block;
+      margin: 15px auto 0;
+    }
+  }
+</style>
 
 <script>
   function myFunction() {
