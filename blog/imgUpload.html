@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload and Set Background Image</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #f4f4f4;
+        transition: background 0.5s ease-in-out;
+      }
+
+      #fileInput {
+        margin-top: 20px;
+      }
+
+      .container {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        color: white;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Choose an Image as Background</h1>
+      <input type="file" id="fileInput" accept="image/*" />
+    </div>
+
+    <script>
+      document
+        .getElementById("fileInput")
+        .addEventListener("change", function (event) {
+          const file = event.target.files[0];
+
+          if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+              document.body.style.backgroundImage = `url(${e.target.result})`;
+              document.body.style.backgroundSize = "cover";
+              document.body.style.backgroundPosition = "center";
+            };
+
+            reader.readAsDataURL(file);
+          }
+        });
+    </script>
+  </body>
+</html>

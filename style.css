@@ -7,19 +7,24 @@
 
 /*------------Nav bar----------*/
 .navbar.bg-light {
-  background-color: transparent;
+  background-color: #007bff;
 }
+/* .navbar.bg-blue {
+  background-color: #007bff;
+} */
 
 .nav-bar {
-  background-color: transparent;
+  background-color: rgb(235, 229, 221);
   position: sticky;
   top: 0;
   z-index: 999;
+  height: 65px;
 }
 
 .navbar-brand img {
+  margin-top: 10px;
   width: auto;
-  max-height: 65px;
+  max-height: 80px;
   margin-left: 30px;
 }
 
@@ -120,7 +125,7 @@
   background-color: #fff;
   border: none;
   border-radius: 4px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   margin-top: -2px;
   padding-top: 0;
   padding-bottom: 0;
@@ -143,9 +148,11 @@
 }
 
 .dropdown-menu .dropdown-item:hover {
-  background-color: #74cdc0 !important;
+  background-color: rgb(79, 109, 206) !important;
 }
-
+.dropdown-menu .dropdown-item .active {
+  background-color: rgb(79, 109, 206) !important;
+}
 
 .nav-item.dropdown:hover .dropdown-menu {
   display: block;
@@ -192,6 +199,7 @@
 }
 
 .carousel-inner .carousel-item {
+  position: relative;
   transition-duration: 6s;
 }
 
@@ -237,24 +245,23 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 786px) {
-  .carousel-caption h5 {
-    font-size: 7vw;
-  }
-}
-
 /* Responsive styles */
-@media screen and (min-width: 1000px) and (max-width: 1500px) {
-  .carousel-caption h5,
-  .carousel-caption h6,
-  .carousel-caption .btn.btn-primary {
-    font-size: 1rem;
-    padding: 15px 8% 15px 8%;
-    margin:auto;
+@media screen and (min-width: 801px) and (max-width: 1700px) {
+  .hero_content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    margin: 10px;
+  }
+  .slider-btn {
+    padding: 0 8% 10% 9%;
+    text-align: left;
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 200px) and (max-width: 500px) {
   .carousel-caption h5 {
     font-size: 3rem;
     padding: 15px 8% 15px 8%;
@@ -267,9 +274,21 @@
     margin-left: 8%;
     font-size: 1rem;
   }
+  .hero_content {
+    width: 50%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+  }
+  .slider-btn {
+    padding: 0 8% 15px 10%; /* Maintain existing padding */
+    text-align: left; /* Aligns the button to the left */
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 600px) and (max-width: 1000px) {
   .carousel-item img {
     height: 80vh;
   }
@@ -284,6 +303,17 @@
   .carousel-caption .btn.btn-primary {
     margin-left: 5%;
     padding: 8px 20px;
+  }
+  .hero_content {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+  }
+  .slider-btn {
+    padding: 0 8% 15px 10%; /* Maintain existing padding */
+    text-align: left; /* Aligns the button to the left */
   }
 }
 
@@ -302,6 +332,20 @@
   .carousel-caption .btn.btn-primary {
     font-size: 0.9rem;
     padding: 6px 15px;
+  }
+  .hero_content {
+    margin-top: 190px;
+    margin-left: 100px;
+
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+  }
+  .slider-btn {
+    padding: 0 8% 15px 10%; /* Maintain existing padding */
+    text-align: left; /* Aligns the button to the left */
   }
 }
 
@@ -323,6 +367,17 @@
   .carousel-caption .banner-btn {
     font-size: 1.2rem; /* Smaller button text for smaller screens */
   }
+  .hero_content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+  }
+  .slider-btn {
+    padding: 0 8% 15px 10%; /* Maintain existing padding */
+    text-align: left; /* Aligns the button to the left */
+  }
 }
 
 @media (max-width: 576px) {
@@ -337,37 +392,38 @@
   .carousel-caption .banner-btn {
     font-size: 1rem; /* Smaller button text for mobile */
   }
-}
-//@media (max-width: 1000px) {
-  .carousel-caption h5 {
-    display: none; /* Even smaller font size for mobile */
-  }
+  .hero_content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
 
-  .carousel-caption h6 {
-    display: none; /* Even smaller font size for mobile */
+    justify-content: center;
   }
-//}
- // .carousel-caption .banner-btn {
-    display: none; /* Smaller button text for mobile */
-  }
+}
+
 //}
 
 /*------------About----------------*/
+
 #about {
-  
   padding-top: 80px;
   padding-bottom: 50px;
   color: rgb(0, 0, 0);
   text-align: justify;
 }
-#about .container{
+#about .container {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-#about.row {
+#about .row {
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
+  flex-wrap: nowrap; /* Prevents wrapping */
+  width: 100%; /* Ensures full width */
+}
+
+#about .row > * {
+  flex: 1; /* Makes child elements take equal space */
+  min-width: 100px; /* Prevents elements from shrinking too much */
 }
 
 #about .btn {
@@ -378,18 +434,8 @@
 }
 
 .about-content {
-  
   padding-top: 20px;
 }
-
-//.col-md-6 {
-  background: #ffffff; /* White background for contrast */
-  padding: 30px;
-  border-radius: 12px; /* Smooth rounded corners */
-  box-shadow: 0px 4px 12px rgba(14, 1, 1, 0.1); /* Soft shadow for depth */
-  border: 1px solid #e0e0e0; /* Subtle border */
-  text-align: center; /* Center content inside */
-//}
 
 .about-content {
   font-size: 18px;
@@ -400,14 +446,13 @@
   letter-spacing: 0.4px; /* Makes text appear more polished */
 }
 
-
 /* About section column spacing */
 @media (max-width: 768px) {
   .about-content {
     margin-right: 0;
     margin-bottom: 30px;
   }
-  
+
   .skills-bar {
     padding-left: 15px;
   }
@@ -489,7 +534,7 @@
   .services {
     gap: 20px;
   }
-  
+
   .services .col-md-3 {
     flex: 0 0 calc(50% - 20px);
     max-width: calc(50% - 20px);
@@ -500,7 +545,7 @@
   .services {
     gap: 15px;
   }
-  
+
   .services .col-md-3 {
     flex: 0 0 100%;
     max-width: 100%;
@@ -765,7 +810,7 @@ blockquote::after {
 }
 
 .whatsapplink .btn {
-  background-color: #25D366;
+  background-color: #25d366;
   color: white;
   border: none;
 }
@@ -776,7 +821,6 @@ footer {
   color: #fff;
   padding: 20px;
   font-family: sans-serif;
-  height:305px;
 }
 
 .footer-container {
@@ -811,11 +855,9 @@ footer {
   margin-top: 10px; /* Adds spacing between logo and icons */
 }
 
-
 .social-icons a {
   margin: 0 5px; /* Adds spacing between icons */
 }
-
 
 .footer-logo p {
   font-size: 16px;
@@ -854,7 +896,6 @@ footer {
 .social-icons a {
   margin-right: 5px;
   margin-left: 20px;
-
 }
 
 .social-icons img {
@@ -871,8 +912,7 @@ footer {
   position: relative;
 }
 
-
-.footer-bottom::before {
+/* .footer-bottom::before {
   content: '';
   position: absolute;
   top: 0;
@@ -881,7 +921,7 @@ footer {
   width: calc(85% + 20px);
   height: 1px;
   background-color:rgb(33, 34, 31);
-}
+} */
 
 .footer-bottom-container {
   max-width: 960px;
@@ -889,8 +929,6 @@ footer {
   padding: 0 20px;
   display: flex;
   align-items: center;
-  
-
 }
 
 .copyright {
@@ -943,15 +981,15 @@ footer {
     padding: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
-  
+
   .navbar-nav {
     background-color: #ffffff;
   }
-  
+
   .navbar-nav .nav-item {
     padding: 8px 15px;
   }
-  
+
   .navbar-nav .nav-link {
     color: #000000 !important;
   }
@@ -976,7 +1014,7 @@ footer {
   }
 
   #about .row {
-    display:grid:
+    display: grid;
     grid-template-columns: 2fr 1fr;
   }
   .about-content {
@@ -1038,7 +1076,6 @@ footer {
   .social-icons a {
     margin-right: 5px;
     margin-left: 20px;
-  
   }
 }
 
@@ -1048,14 +1085,13 @@ footer {
     margin: 10px 0;
     text-align: center;
   }
-  
+
   .whatsapplink .btn {
     font-size: 1.2rem;
   }
   .social-icons a {
     margin-right: 5px;
     margin-left: 20px;
-  
   }
 }
 
@@ -1063,7 +1099,7 @@ footer {
   .whatsapplink {
     margin-left: 5px;
   }
-  
+
   .whatsapplink .btn {
     font-size: 1.2rem;
   }
@@ -1075,7 +1111,7 @@ footer {
     display: flex;
     flex-direction: column;
   }
-  
+
   #contact .contact-form {
     margin-bottom: 20px;
   }
@@ -1086,7 +1122,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
   }
-  
+
   #contact .col-md-6 {
     flex: 0 0 100%;
     max-width: 100%;

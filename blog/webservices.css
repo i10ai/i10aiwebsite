@@ -1,0 +1,260 @@
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px; /* Adjust spacing between items */
+  justify-items: center; /* Center align content */
+  grid-auto-flow: row dense; /* Ensures left-to-right, then next row */
+  max-width: 100%;
+  overflow-x: hidden;
+}
+/* Grid positioning */
+.blog-container .post-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.blog-container .post-2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.blog-container .post-3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.blog-container .post-4 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.blog-container .post-5 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.blog-container .post-6 {
+  grid-column: 3;
+  grid-row: 2;
+}
+.blog-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: transform 0.3s ease;
+  height: 460px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Ensure positioning works for absolute children */
+}
+
+.delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px !important;
+  height: 24px !important;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  padding: 4px;
+  transition: background 0.3s ease;
+  object-fit: contain;
+  min-width: 24px;
+  min-height: 24px;
+  max-width: 24px;
+  max-height: 24px;
+}
+
+.delete:hover {
+  background-color: rgba(255, 0, 0, 0.8); /* Slight red hover effect */
+}
+
+.blog-card img {
+  height: 200px;
+  object-fit: cover;
+  max-width: 100%;
+  width: 100%;
+}
+
+.blog-image {
+  max-width: 100%;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-body {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+  border: 1px solid rgba(0, 150, 136, 0.4);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.blog-title {
+  font-size: clamp(1rem, 2vw, 1.75rem);
+  font-weight: bold;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.blog-text {
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  color: #555;
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 4.5em;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1199px) {
+  .blog-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-container {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+  }
+}
+
+/* Remove horizontal scrolling */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.card:hover {
+  transform: scale(0.95);
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+  backdrop-filter: blur(5px); /* Blur effect */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto; /* 10% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 50%; /* Could be more or less, depending on screen size */
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #000;
+  text-decoration: none;
+}
+.addImg {
+  width: 20%; /* Relative to the modal-content width */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto 20px; /* Center the image and add space below */
+  display: block; /* Ensure it behaves as a block element */
+
+  object-fit: cover; /* Ensure the image fits well within the circle */
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 100px; /* Set a maximum size to prevent it from becoming too large */
+}
+#blogForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#blogForm input,
+#blogForm textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#blogForm textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+#blogForm button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#blogForm button:hover {
+  background-color: #0056b3;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#loginForm input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#loginForm button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#loginForm button:hover {
+  background-color: #0056b3;
+}
