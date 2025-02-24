@@ -1,0 +1,89 @@
+<div
+  style="
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+    height: 80vh;
+  "
+>
+  <!-- Left Content -->
+  <div style="flex: 1; min-width: 300px; max-width: 600px">
+    <h2 style="font-size: 28px; font-weight: bold; margin-bottom: 10px">
+      About Us
+    </h2>
+    <p style="font-size: 16px; line-height: 1.6; text-align: justify">
+      Our mission is to provide intelligent, customized IT solutions that drive
+      digital transformation, enhance operational efficiency, and unlock new
+      growth opportunities for businesses. Through a commitment to excellence,
+      innovation, and customer-centricity, we aim to be the trusted technology
+      partner for businesses worldwide. We empower businesses to unlock the full
+      potential of e-commerce, offering tailored solutions that optimize
+      inventory management, automate workflows, and provide seamless online
+      experiences for both buyers and sellers.
+      <span id="dots" style="display: inline">...</span>
+      <span id="more" style="display: none">
+        With i10AI as your partner, you gain a competitive edge in the digital
+        marketplace, transforming your business into a data-driven,
+        customer-centric powerhouse. At 10AI Solutions, our vision is to
+        revolutionize the digital landscape by delivering cutting-edge
+        technology solutions that empower businesses to innovate, scale, and
+        thrive in an ever-evolving world.
+      </span>
+    </p>
+    <button
+      onclick="myFunction()"
+      id="myBtn"
+      type="button"
+      style="
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+      "
+    >
+      Read more &gt;&gt;
+    </button>
+  </div>
+
+  <!-- Right Image -->
+  <div
+    style="
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+      display: flex;
+      justify-content: center;
+    "
+  >
+    <img
+      src="/i10aiwebsite/img/about_us copy.png"
+      alt="about us"
+      style="max-width: 100%; height: auto"
+    />
+  </div>
+</div>
+
+<script>
+  function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more &gt;&gt;";
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less";
+      moreText.style.display = "inline";
+    }
+  }
+</script>

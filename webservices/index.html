@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>i10AI</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/i10aiwebsite/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="/img/AIlogo.ico" type="image/x-icon" />
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+    <style>
+      /* 🚀 Fix Horizontal Overflow */
+      html,
+      body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+
+      .content-section {
+        max-width: 100vw;
+        overflow-x: hidden;
+        padding: 20px; /* Maintain spacing */
+      }
+
+      .container {
+        max-width: 1200px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      /* ✅ Fixed Box Size & Restored Gradient Borders */
+      .card {
+        width: 100%;
+        height: 250px; /* ✅ Fixed height */
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 150, 136, 0.4);
+        background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+      }
+
+      /* ✅ Hover Effect */
+      .card:hover {
+        transform: scale(0.95);
+      }
+
+      /* ✅ Card Body Styling */
+      .card-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+      }
+
+      .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .card-text {
+        font-size: 1rem;
+        color: #555;
+      }
+
+      /* 🌍 Responsive Fixes */
+      @media (max-width: 768px) {
+        .content-section {
+          padding: 10px;
+        }
+
+        .container {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        .card {
+          height: 250px; /* Keep fixed height */
+          margin-bottom: 20px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .container {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+
+        .card {
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 🚀 Navigation -->
+
+    <!-- 🚀 Services Banner -->
+    <section class="services-banner">
+      <div
+        class="carousel-inner"
+        style="position: relative; width: 100%; height: 70vh; overflow: hidden"
+      >
+        <div
+          class="carousel-item active"
+          style="position: relative; width: 100%; height: 100%"
+        >
+          <video
+            autoplay
+            muted
+            loop
+            id="video1"
+            muted
+            playsinline
+            style="
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              opacity: 0;
+              transition: opacity 1s;
+            "
+          >
+            <source src="./img/webServicesBanner(3).mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🚀 Content Section (Fixed Overflow + Fixed Box Sizes) -->
+
+    <!-- 🚀 Footer -->
+    <section
+      id="footer"
+      w3-include-html="/i10aiwebsite/components/footer.html"
+    ></section>
+
+    <!-- 🚀 Load W3 Include & bannerVideo.js After Content is Loaded -->
+    <script>
+      w3.includeHTML(() => {
+        console.log("All HTML content loaded!");
+        let script = document.createElement("script");
+        script.src = "bannerVideo.js";
+        document.body.appendChild(script);
+      });
+    </script>
+  </body>
+</html>

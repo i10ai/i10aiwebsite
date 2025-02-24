@@ -22,40 +22,52 @@
 
   <body onLoad="onload()">
     <!-------Slider------------->
-    <div id="slider">
-      <div id="headerSlider" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block img-fluid" src="img/BGBanner.png" />
-            <div class="carousel-caption">
-              <!-------Header------------->
-              <section
-                class="nav-bar"
-                w3-include-html="./header.html"
-              ></section>
-              <h5>
-                <p>i10AI</p>
-                <p>Solutions</p>
-              </h5>
-              <h6>
-                <p>Embark on your Industrial</p>
-                <p>Digital Transformation With Us</p>
-              </h6>
-              <div class="slider-btn">
-                <a href="#contact" class="btn btn-primary">SEND MESSAGE</a>
+    <section
+      class="nav-bar"
+      w3-include-html="./components/header.html"
+    ></section>
+    <section>
+      <div id="slider">
+        <div id="headerSlider" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block img-fluid" src="img/hero-bg.jpg" />
+              <div class="carousel-caption">
+                <!-------Header------------->
+
+                <div class="hero_content">
+                  <h5>
+                    <p>i10AI Solutions</p>
+                  </h5>
+                  <h6>
+                    <p>Embark on your Industrial</p>
+                    <p>Digital Transformation With Us</p>
+                  </h6>
+                  <div class="slider-btn">
+                    <a
+                      href="#contact"
+                      class="btn btn-primary"
+                      style="background-color: orangered !important"
+                      >SEND MESSAGE</a
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!------------About---------------->
-    <section id="about" w3-include-html="./about.html"></section>
+    <section id="about" w3-include-html="./components/about.html"></section>
     <!-----------Services-------------->
-    <section id="services" w3-include-html="./services.html"></section>
+    <section
+      id="services"
+      w3-include-html="./components/services.html"
+    ></section>
     <!-------------promo----------------->
-    <section id="promo" w3-include-html="./promo.html"></section>
+    <section id="promo" w3-include-html="./components/promo.html"></section>
     <!-----------offerings Plans------------->
     <section id="offerings">
       <div class="container">
@@ -243,7 +255,7 @@
       </div>
     </section>
     <!------------------Footer Page-------------------->
-    <section id="footer" w3-include-html="./footer.html"></section>
+    <section id="footer" w3-include-html="./components/footer.html"></section>
 
     <!------------------Footer End-------------------->
     <script>

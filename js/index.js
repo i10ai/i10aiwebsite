@@ -1,9 +1,7 @@
 function onload() {
   let y = 0;
 
-
   const x = setInterval(() => {
-
     document.getElementById("electrification").innerHTML = y + "%";
     document.getElementById("electrification").style.width = y + "%";
     y = y + 1;
@@ -43,7 +41,13 @@ function onload() {
       clearInterval(m);
     }
   }, 70);
-
 }
 
+function setActive(clickedElement) {
+  // Remove 'active' class from all <a> elements
+  const allLinks = document.querySelectorAll(".dropdown-item");
+  allLinks.forEach((link) => link.classList.remove("active"));
 
+  // Add 'active' class to the clicked element
+  clickedElement.classList.add("active");
+}

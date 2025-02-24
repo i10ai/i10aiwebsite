@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>i10AI - App Development Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/i10aiwebsite/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="/img/AIlogo.ico" type="image/x-icon" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="./js/Scrolltop.js"></script>
+    <script src="./js/smooth-scroll.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" href="/i10aiwebsite/ind2b_style.css" />
+    <link rel="stylesheet" href="./webservices.css" />
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+  </head>
+  <body>
+    <section
+      class="nav-bar bg-light"
+      w3-include-html="../components/header.html"
+    ></section>
+
+    <section
+      class="blog-content py-5"
+      style="background-color: #f8f9fa; width: 100%; min-height: 100vh"
+    >
+      <div class="container">
+        <!-- Blog Title -->
+        <div class="row text-center mb-5">
+          <div class="col-12">
+            <h2
+              class="display-4 mb-4"
+              style="font-size: 2.5rem; font-weight: bold; color: #333"
+            >
+              App Development Insights
+            </h2>
+            <p
+              class="lead mb-5"
+              style="font-size: 1.25rem; color: #555; line-height: 1.8"
+            >
+              Explore the latest trends, best practices, and expert advice in
+              app development.
+            </p>
+          </div>
+        </div>
+
+        <!-- Blog Posts -->
+        <div class="container">
+          <div
+            class="blog-container row"
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 20px;
+              justify-content: center;
+            "
+          >
+            <style>
+              .blog-card {
+                flex: 0 0 calc(33.333% - 20px);
+                max-width: calc(33.333% - 20px);
+              }
+
+              @media (max-width: 1200px) {
+                .blog-card {
+                  flex: 0 0 calc(50% - 20px);
+                  max-width: calc(50% - 20px);
+                }
+                .blog-image {
+                  max-width: 95%;
+                }
+                .blog-title {
+                  font-size: 1.2rem;
+                }
+                .circular-btn {
+                  width: 45px;
+                  height: 45px;
+                  font-size: 20px;
+                }
+              }
+
+              @media (max-width: 768px) {
+                .blog-card {
+                  flex: 0 0 100%;
+                  max-width: 90%;
+                  margin: 0 auto;
+                }
+                .blog-image {
+                  max-width: 85%;
+                }
+                .blog-title {
+                  font-size: 1.1rem;
+                }
+                .blog-text {
+                  font-size: 0.9rem;
+                }
+                .delete {
+                  width: 20px;
+                  height: 20px;
+                }
+                .circular-btn {
+                  width: 40px;
+                  height: 40px;
+                  font-size: 18px;
+                }
+                .blog-body {
+                  padding: 1.5rem;
+                }
+              }
+
+              @media (max-width: 480px) {
+                .blog-card {
+                  max-width: 100%;
+                }
+                .blog-image {
+                  max-width: 80%;
+                }
+                .blog-title {
+                  font-size: 1rem;
+                }
+                .blog-text {
+                  font-size: 0.85rem;
+                }
+                .delete {
+                  width: 16px;
+                  height: 16px;
+                }
+                .circular-btn {
+                  width: 35px;
+                  height: 35px;
+                  font-size: 16px;
+                }
+                .blog-body {
+                  padding: 1rem;
+                }
+              }
+            </style>
+
+            <div class="blog-card post-6">
+              <img
+                src="../img/ObserUN.png"
+                alt="Another Topic"
+                class="blog-image"
+              />
+              <div
+                class="blog-body"
+                style="
+                  padding: 2rem;
+                  background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+                  border: 1px solid rgba(0, 150, 136, 0.4);
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  text-align: center;
+                  height: 100%;
+                "
+              >
+                <h5 class="blog-title">Add new blog</h5>
+                <button
+                  class="circular-btn"
+                  id="addBlogBtn"
+                  style="
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background-color: gray;
+                    color: white;
+                    font-size: 24px;
+                    font-weight: bold;
+                    border: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease, transform 0.2s;
+                    margin: 10px 0;
+                  "
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal for Adding New Blog -->
+      <div id="addBlogModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2>Add New Blog</h2>
+          <label for="blogImageUpload">
+            <img
+              src="/i10aiwebsite/img/addImg.png"
+              class="addImg"
+              style="width: auto; height: auto !important; cursor: pointer"
+            />
+          </label>
+
+          <input
+            type="file"
+            id="blogImageUpload"
+            accept="image/*"
+            style="display: none"
+          />
+
+          <form id="blogForm">
+            <input
+              type="text"
+              id="blogHeading"
+              placeholder="Enter Blog Heading"
+              required
+            />
+            <input
+              type="text"
+              id="blogSubheading"
+              placeholder="Enter Blog Subheading"
+              required
+            />
+            <textarea
+              id="blogPassage"
+              placeholder="Enter Blog Passage"
+              required
+            ></textarea>
+
+            <button onclick="{submit}" type="submit">Submit</button>
+            <button type="button" id="logout">Logout</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Login Modal -->
+      <div id="loginModal" class="modal">
+        <div class="modal-content">
+          <span class="close-login-form-btn">&times;</span>
+          <h2>Login</h2>
+          <form id="loginForm">
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your Email"
+              required
+            />
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your Password"
+              required
+            />
+            <button id="login" type="button">Login</button>
+            <button id="signUp" type="button">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer" w3-include-html="../components/footer.html"></section>
+
+    <script>
+      w3.includeHTML();
+    </script>
+
+    <script type="module" src="./firebaseAuth.js"></script>
+    <script type="module" src="./getUser.js"></script>
+    <script type="module" src="./unsplashApi.js"></script>
+    <script></script>
+  </body>
+</html>
